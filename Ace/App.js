@@ -1,14 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { AceProvider } from './Context/AceContext.js';
+import HomeScreen from './Screens/Home';
 
-export default function App() {
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Welcome to ACE!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      
+      <AceProvider>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{
+              title: 'Home',
+            }}
+          />
+          
+          
+        </Stack.Navigator>
+      </AceProvider>
+    </NavigationContainer>
   );
-}
+};
+
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -18,3 +40,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
+export default App;

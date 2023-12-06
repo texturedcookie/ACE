@@ -5,6 +5,7 @@ import ProfileButton from '../Components/ProfileButton';
 import FriendsButton from '../Components/FriendsButton';
 
 const HomeScreen = ({ navigation }) => {
+
   return (
     <View style={styles.container}>
       <ProfileButton navigation={navigation}/>

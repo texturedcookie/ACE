@@ -5,6 +5,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { AceProvider } from './Context/AceContext.js';
 import HomeScreen from './Screens/Home';
+import ProfileScreen from './Screens/Profile.js';
+import FriendsScreen from './Screens/Friends.js';
+
 
 const Stack = createStackNavigator();
 
@@ -18,9 +21,26 @@ const App = () => {
             name="Home"
             component={HomeScreen}
             options={{
-              title: 'Home',
+              title: 'ACE',
             }}
           />
+
+          <Stack.Screen
+            name="Profile"
+            component={ProfileScreen}
+            options={{
+              title: 'ACE',
+            }}
+          />
+
+          <Stack.Screen
+            name="Friends"
+            component={FriendsScreen}
+            options={{
+              title: 'ACE',
+            }}
+          />
+
           
           
         </Stack.Navigator>

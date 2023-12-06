@@ -9,7 +9,7 @@ const NavBar = (props) => {
     <View style={styles.container}>
       <Button title="Home" onPress={() => props.navigation.navigate('Home')} color="white"/>
       <Button title="Study" onPress={() => props.navigation.navigate('Study')} color="white"/>
-      <Button title="Plan" onPress={() => props.navigation.navigate('Plan')} color="white"/>
+      <Button title="Plans" onPress={() => props.navigation.navigate('Plans')} color="white"/>
     </View>
     // </View>
   );

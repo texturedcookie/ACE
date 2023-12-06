@@ -8,7 +8,7 @@ const FriendsButton = (props) => {
     <View style={styles.container}>
       <Button 
       title="Friends" 
-      onPress={() => props.navigation.navigate('Profile')}
+      onPress={() => props.navigation.navigate('Friends')}
       color="white"
       />
 

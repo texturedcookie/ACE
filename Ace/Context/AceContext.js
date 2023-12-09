@@ -5,6 +5,7 @@ const AceContext = createContext();
 export const AceProvider = ({ children }) => {
    
     const aceContextValue = {
+      
     "NAME":"hi"
     };
   

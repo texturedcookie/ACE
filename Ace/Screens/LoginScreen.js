@@ -10,13 +10,13 @@ const LoginScreen = ({ navigation }) => {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    // Check if the provided email and password match any user
+   
     const user = users.find(
       (user) => user.email === email && user.password === password
     );
 
     if (user) {
-      // Navigate to the next screen (you can replace 'Home' with your desired screen)
+      
       navigation.navigate("Home", { userId: user.id });
     } else {
       // Display an error message or handle the invalid login

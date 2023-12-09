@@ -7,6 +7,8 @@ import { AceProvider } from './Context/AceContext.js';
 import HomeScreen from './Screens/Home';
 import ProfileScreen from './Screens/Profile.js';
 import FriendsScreen from './Screens/Friends.js';
+import QuizScreen from './Screens/Quizs.js';
+import StudyScreen from './Screens/Study.js';
 
 
 const Stack = createStackNavigator();
@@ -36,6 +38,22 @@ const App = () => {
           <Stack.Screen
             name="Friends"
             component={FriendsScreen}
+            options={{
+              title: 'ACE',
+            }}
+          />
+
+          <Stack.Screen
+            name="Quiz"
+            component={QuizScreen}
+            options={{
+              title: 'ACE',
+            }}
+          />
+          
+          <Stack.Screen
+            name="Study"
+            component={StudyScreen}
             options={{
               title: 'ACE',
             }}

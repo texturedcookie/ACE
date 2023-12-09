@@ -15,7 +15,7 @@ const HomeScreen = ({ navigation }) => {
       <Button
       style={styles.studyButton}
         title="Create Study Plan"
-        onPress={() => navigation.navigate('Details')}
+        onPress={() => navigation.navigate('Quiz')}
         color="purple"
       />
       <NavBar navigation={navigation}/>

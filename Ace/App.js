@@ -9,7 +9,7 @@ import ProfileScreen from './Screens/Profile.js';
 import FriendsScreen from './Screens/Friends.js';
 import QuizScreen from './Screens/Quizs.js';
 import StudyScreen from './Screens/Study.js';
-
+import LoginScreen from './Screens/LoginScreen.js';
 
 const Stack = createStackNavigator();
 
@@ -18,7 +18,16 @@ const App = () => {
     <NavigationContainer>
       
       <AceProvider>
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="Login">
+
+        <Stack.Screen
+            name="Login"
+            component={LoginScreen}
+            options={{
+              title: 'ACE',
+            }}
+          />
+
           <Stack.Screen
             name="Home"
             component={HomeScreen}

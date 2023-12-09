@@ -17,7 +17,7 @@ const LoginScreen = ({ navigation }) => {
 
     if (user) {
       // Navigate to the next screen (you can replace 'Home' with your desired screen)
-      navigation.navigate("Home");
+      navigation.navigate("Home", { userId: user.id });
     } else {
       // Display an error message or handle the invalid login
       alert("Invalid email or password");

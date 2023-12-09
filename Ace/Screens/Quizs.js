@@ -10,7 +10,7 @@ const QuizScreen = ({ navigation }) => {
     const [selectedOption, setSelectedOption] = useState(null);
     const handleOptionSelect = (option) => {
       setSelectedOption(option);
-      // You can add additional logic here based on the selected option
+    
     };
 
 
@@ -18,7 +18,7 @@ const QuizScreen = ({ navigation }) => {
     const [selectedLearning, setSelectedLearning] = useState(null);
     const handleLearningSelect = (option) => {
       setSelectedLearning(option);
-      // You can add additional logic here based on the selected option
+
     };
 
 
@@ -34,7 +34,7 @@ const QuizScreen = ({ navigation }) => {
       <Button
       style={styles.studyButton}
         title="I'm feeling motivated"
-        onPress={() => navigation.navigate('Study')}
+        onPress={() => navigation.navigate('Study', { userId: user.id })}
         color="purple"
       />
       {/* <NavBar navigation={navigation}/> */}
